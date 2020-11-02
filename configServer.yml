@@ -7,9 +7,9 @@ services:
     stop_grace_period: 30s
     environment:
       - serviceName=configServer
-      - deploy_socket_url=127.0.0.1:6886
+      - deploy_socket_url=192.168.3.252:6886
       - TZ=CST-8
-      - soa_zookeeper_host=127.0.0.1:2181
+      - soa_zookeeper_host=192.168.3.252:2181
       - JAVA_OPTS= -Dname=configServer -Xms512M -Xmx512M -Xss256K -Dfile.encoding=UTF-8 -Dsun.jun.encoding=UTF-8
     ports:
       - "6800:8080"
