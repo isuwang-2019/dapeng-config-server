@@ -8,6 +8,12 @@ services:
     environment:
       - serviceName=configServer
       - deploy_socket_url=192.168.3.252:6886
+      - DB_CONFIG_SERVER_URL=jdbc:mysql://192.168.3.252:3306/config_server_db?useUnicode=true&characterEncoding=utf8
+      - DB_CONFIG_SERVER_USER=iplastest
+      - DB_CONFIG_SERVER_PASSWD=123456
+      - DB_AUTH_URL=jdbc:mysql://192.168.3.252:3306/dapeng_mesh_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+      - DB_AUTH_USER=iplastest
+      - DB_AUTH_PASSWD=123456
       - TZ=CST-8
       - soa_zookeeper_host=192.168.3.252:2181
       - JAVA_OPTS= -Dname=configServer -Xms512M -Xmx512M -Xss256K -Dfile.encoding=UTF-8 -Dsun.jun.encoding=UTF-8
